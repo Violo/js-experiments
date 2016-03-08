@@ -17,6 +17,14 @@
     <form>
       <input type="text" role="add_input" />
       <input type="button" role="add_button" value="Add" />
+      <div role="todolist"></div>
     </form>
+    <script type="text/template" role="toDoTemplate">
+      <ul>
+        <% _.each( list, function(todo){%>
+          <li><%= todo.text%></li>
+        <%})%>
+      </ul>
+    </script>
   </body>
 </html>

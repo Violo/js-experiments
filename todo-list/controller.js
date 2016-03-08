@@ -5,6 +5,15 @@ var init = function() {
         var input = $('input[role="add_input"]');
         toDoList.addToDo(input.val());
         input.val('');
+
+        var templateToDoList = _.template($('script[role="toDoTemplate"]').text());
+
+        var html = templateToDoList({
+            list:toDoList.listAll()
+        });
+
+        $('div[role="todolist"]').html(html);
+
     });
 
 }
