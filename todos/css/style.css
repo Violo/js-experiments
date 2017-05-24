@@ -1,0 +1,75 @@
+/* Main ToDos stylesheet */
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+body{
+  color:#444;
+  background-color:#fff;
+  font-family:'Roboto', sans-serif;
+  font-size:13px;
+  padding:50px;
+}
+
+h1{
+  font-size:40px;
+  text-align:center;
+  border-bottom:1px solid #ccc;
+  margin-bottom:50px;
+  padding-bottom:20px;
+}
+
+input{
+  padding:8px;
+  font-size:18px;
+  border:1px solid #ccc;
+}
+
+/* form_add_todo */
+.form_add_todo{
+  margin-bottom:40px;
+}
+.form_add_todo__button{
+  padding:8px;
+  font-size:18px;
+  border:1px solid #ccc;
+  background-color:yellowgreen;
+  cursor:pointer;
+}
+
+/* list_todo */
+.list_todo{
+  list-style:none;
+  width:35%;
+}
+.list_todo__item{
+  padding:10px;
+  font-size:20px;
+  border-bottom:1px solid #ccc;
+}
+.list_todo__item:hover{
+  cursor:pointer;
+  background-color:#F7F7F7;
+}
+.list_todo__item__delete{
+  display:none;
+  float:right;
+  font-size:10px;
+  color:#ccc;
+}
+.list_todo__item.m-done span{
+  text-decoration:line-through; 
+  opacity:0.2;
+}
+.list_todo__item.m-done .list_todo__item__delete{
+  text-decoration:none; 
+  display:block;
+  opacity:0.5;
+  margin-top:10px;
+}
+.list_todo__item.m-done .list_todo__item__delete:hover{
+  color:red;
+}
