@@ -39,6 +39,9 @@ input{
   background-color:yellowgreen;
   cursor:pointer;
 }
+.form_add_todo .form_add_todo__error_text{
+  color:red;
+}
 
 /* list_todo */
 .list_todo{
