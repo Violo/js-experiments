@@ -11,12 +11,12 @@
   <body>
     <h1>ToDos</h1>
     <form class="form_add_todo">
-      <input type="text" class="form_add_todo__input" role="add_todo_value" />
-      <button type="button" class="form_add_todo__button" role="add_button">
+      <input type="text" class="form_add_todo__input" role="todo_value_input" />
+      <button type="button" class="form_add_todo__button" role="todo_add_button">
         <span>Add</span>
       </button>
       <p class="form_add_todo__error_text" role="error_text">
-        Scrivi qualcosa pezzo di merda!
+        Il campo è vuoto, scrivi qualcosa.
       </p>
     </form>
 
@@ -26,17 +26,16 @@
       </li>
       <li class="list_todo__item">
         <span>Item two</span><span class="list_todo__item__delete">Delete</span>
-      </li>
-      <li class="list_todo__item">
-        <span>Item three</span><span class="list_todo__item__delete">Delete</span>
       </li> -->
     </ul>
 
+    <!-- list item template -->
     <template id="todo_item_template">
       <li class="list_todo__item">
         <span role="todo_value">Item</span><span class="list_todo__item__delete">Delete</span>
       </li>
     </template>
+
     <script src="js/generateTodoItem.js"></script>
     <script src="js/index.js"></script>
   </body>

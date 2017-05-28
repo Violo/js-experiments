@@ -1,35 +1,33 @@
 // index js
 
-var addButton = document.querySelector('button[role=add_button]');
-var addTodoValue = document.querySelector('input[role=add_todo_value]');
-var addTodoLinkTemplate = document.querySelector('#todo_item_template');
-var addTodoList = document.querySelector('ul[role=todo_list]');
-var addTodoErrorContainer = document.querySelector('p[role=error_text]');
+var todoAddButton = document.querySelector('button[role=todo_add_button]');
+var todoValueInput = document.querySelector('input[role=todo_value_input]');
+var todoItemTemplate = document.querySelector('#todo_item_template');
+var todoList = document.querySelector('ul[role=todo_list]');
+var todoErrorText = document.querySelector('p[role=error_text]');
 var hide = function(element){
     element.style.display = 'none';
 }
 var show = function(element){
     element.style.display = 'block';
 }
-hide(addTodoErrorContainer);
+hide(todoErrorText);
 
-//console.log(addButton);
 var onClick = function(){
-  hide(addTodoErrorContainer);
-  var value = addTodoValue.value;
+  hide(todoErrorText);
+  var value = todoValueInput.value;
   if (value){
-    var newItem = generateTodoItem(value, addTodoLinkTemplate);
-    addTodoValue.value = '';
-    addTodoList.appendChild(newItem);
+    var newItem = generateTodoItem(value, todoItemTemplate);
+    todoValueInput.value = '';
+    todoList.appendChild(newItem);
   } else{
-    show(addTodoErrorContainer);
+    show(todoErrorText);
   }
 }
 
-addButton.addEventListener('click', onClick, false);
+todoAddButton.addEventListener('click', onClick, false);
 
-// per il disable
-//addButton.addEventListener('change', false);
+
 
 
 

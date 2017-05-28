@@ -40,7 +40,9 @@ input{
   cursor:pointer;
 }
 .form_add_todo .form_add_todo__error_text{
+  margin:10px 0 0 0;
   color:red;
+  font-style:italic;
 }
 
 /* list_todo */
@@ -58,21 +60,20 @@ input{
   background-color:#F7F7F7;
 }
 .list_todo__item__delete{
-  display:none;
   float:right;
+  margin-top:10px;
   font-size:10px;
+  text-decoration:none; 
+  opacity:0.5;
   color:#ccc;
+}
+.list_todo__item__delete:hover{
+  color:red;
 }
 .list_todo__item.m-done span{
   text-decoration:line-through; 
   opacity:0.2;
 }
 .list_todo__item.m-done .list_todo__item__delete{
-  text-decoration:none; 
   display:block;
-  opacity:0.5;
-  margin-top:10px;
-}
-.list_todo__item.m-done .list_todo__item__delete:hover{
-  color:red;
 }
