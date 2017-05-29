@@ -28,16 +28,22 @@ input{
   border:1px solid #ccc;
 }
 
+button{
+  padding:8px;
+  font-size:18px;
+  border:1px solid #ccc;
+  background-color:grey;
+  color:white;
+  cursor:pointer;
+}
+
 /* form_add_todo */
 .form_add_todo{
   margin-bottom:40px;
 }
 .form_add_todo__button{
-  padding:8px;
-  font-size:18px;
-  border:1px solid #ccc;
   background-color:yellowgreen;
-  cursor:pointer;
+  color:#444;
 }
 .form_add_todo .form_add_todo__error_text{
   margin:10px 0 0 0;
@@ -49,6 +55,7 @@ input{
 .list_todo{
   list-style:none;
   width:35%;
+  margin-bottom:30px;
 }
 .list_todo__item{
   padding:10px;

@@ -5,6 +5,8 @@ var todoValueInput = document.querySelector('input[role=todo_value_input]');
 var todoItemTemplate = document.querySelector('#todo_item_template');
 var todoList = document.querySelector('ul[role=todo_list]');
 var todoErrorText = document.querySelector('p[role=error_text]');
+var todoClearTodoButton = document.querySelector('button[role=clear_todo_button]');
+
 var hide = function(element){
     element.style.display = 'none';
 }
@@ -13,7 +15,9 @@ var show = function(element){
 }
 hide(todoErrorText);
 
-var onClick = function(){
+
+
+var addItem = function(){
   hide(todoErrorText);
   var value = todoValueInput.value;
   if (value){
@@ -24,10 +28,17 @@ var onClick = function(){
     show(todoErrorText);
   }
 }
+todoAddButton.addEventListener('click', addItem, false);
 
-todoAddButton.addEventListener('click', onClick, false);
 
 
+var clearTodo = function(){
+  todoList.remove();
+}
+todoClearTodoButton.addEventListener('click', clearTodo, false);
+
+// per il disable
+//todoAddButton.addEventListener('change', test, false);
 
 
 
